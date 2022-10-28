@@ -3,12 +3,12 @@ on:
     branches: [ master ]
     paths:
       - 'module2/**'
-  pull_request:
-    branches: [ master ]
-    paths:
-      - 'module2/**'
+#  pull_request:
+#    branches: [ master ]
+#    paths:
+#      - 'module2/**'
 
-name: Spring Project `my-spring` CI on ECR
+name: Spring Project `module2` CI on ECR
 
 jobs:
   deploy:

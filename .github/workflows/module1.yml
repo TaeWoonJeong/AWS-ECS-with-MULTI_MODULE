@@ -3,10 +3,10 @@ on:
     branches: [ master ]
     paths:
       - 'module1/**'
-  pull_request:
-    branches: [ master ]
-    paths:
-      - 'module1/**'
+#  pull_request:
+#    branches: [ master ]
+#    paths:
+#      - 'module1/**'
 
 name: Spring Project `module1` CI on ECR
 
