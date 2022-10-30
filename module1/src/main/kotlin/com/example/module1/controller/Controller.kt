@@ -13,6 +13,6 @@ class Controller(private val environment: Environment) {
     @GetMapping("/")
     fun get():String {
         val port: String? = environment.getProperty("local.server.port")
-        return "module2의 현재 시간은 "+LocalDateTime.now().toString() + "이고, 포트는 $port 입니다. uuid 값 : $uuid"
+        return "module1의 현재 시간은 "+LocalDateTime.now().toString() + "이고, 포트는 $port 입니다. uuid 값 : $uuid"
     }
 }
