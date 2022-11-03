@@ -7,6 +7,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc
 import springfox.documentation.builders.ApiInfoBuilder
 import springfox.documentation.builders.PathSelectors
 import springfox.documentation.builders.RequestHandlerSelectors
+import springfox.documentation.oas.annotations.EnableOpenApi
 import springfox.documentation.service.ApiInfo
 import springfox.documentation.service.ApiKey
 import springfox.documentation.service.AuthorizationScope
@@ -18,7 +19,7 @@ import springfox.documentation.spring.web.plugins.Docket
 
 
 @Configuration
-@EnableWebMvc
+@EnableOpenApi
 class SwaggerConfig {
     @Bean
     fun translator(): ResourceBundleMessageSource? {

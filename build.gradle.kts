@@ -5,6 +5,8 @@ plugins {
     id("io.spring.dependency-management") version "1.0.15.RELEASE" apply false
     kotlin("jvm") version "1.6.21"
     kotlin("plugin.spring") version "1.6.21" apply false
+    kotlin("plugin.jpa") version "1.6.21" apply false
+    kotlin("kapt") version "1.7.10" apply false
 }
 
 allprojects {
@@ -23,6 +25,8 @@ subprojects {
     apply(plugin = "io.spring.dependency-management")
     apply(plugin = "org.springframework.boot")
     apply(plugin = "org.jetbrains.kotlin.plugin.spring")
+    apply(plugin = "org.jetbrains.kotlin.plugin.jpa")
+    apply(plugin = "kotlin-kapt")
 
     dependencies {
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
@@ -32,6 +36,13 @@ subprojects {
         testImplementation("org.springframework.boot:spring-boot-starter-test")
         // swagger 문서화
         implementation ("io.springfox:springfox-boot-starter:3.0.0")
+        // jpa
+        implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+        // feign
+        implementation("org.springframework.cloud:spring-cloud-starter-openfeign:3.1.3")
+
+        runtimeOnly("com.h2database:h2")
+        runtimeOnly("mysql:mysql-connector-java")
     }
 
     tasks.getByName("bootJar") {
