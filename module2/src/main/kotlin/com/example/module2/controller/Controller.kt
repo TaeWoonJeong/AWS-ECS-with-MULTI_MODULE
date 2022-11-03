@@ -15,4 +15,9 @@ class Controller(private val environment: Environment) {
         val port: String? = environment.getProperty("local.server.port")
         return "module2의 현재 시간은 "+LocalDateTime.now().toString() + "이고, 포트는 $port 입니다. uuid 값 : $uuid"
     }
+
+    @GetMapping("/rolling")
+    fun rolling() : String {
+        return "module2 Rolling Update Completed!"
+    }
 }

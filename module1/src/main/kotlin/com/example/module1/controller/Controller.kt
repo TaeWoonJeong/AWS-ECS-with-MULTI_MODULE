@@ -30,4 +30,9 @@ class Controller(private val environment: Environment, private val service: Serv
     fun getUser(): List<GetUserResponseDto> {
         return service.getUser()
     }
+
+    @GetMapping("/rolling")
+    fun rolling() : String {
+        return "module1 Rolling Update Completed!"
+    }
 }
