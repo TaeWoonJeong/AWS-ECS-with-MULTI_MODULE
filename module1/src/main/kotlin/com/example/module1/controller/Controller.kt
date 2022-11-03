@@ -31,8 +31,8 @@ class Controller(private val environment: Environment, private val service: Serv
         return service.getUser()
     }
 
-    @GetMapping("/rolling")
-    fun rolling() : String {
-        return "module1 Rolling Update Completed!"
-    }
+//    @GetMapping("/rolling")
+//    fun rolling() : String {
+//        return "module1 Rolling Update Completed!"
+//    }
 }
