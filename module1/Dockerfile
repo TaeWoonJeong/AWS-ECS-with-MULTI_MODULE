@@ -1,4 +1,4 @@
-FROM openjdk:11-jre-slim
+FROM openjdk:11.0.16-jre-slim
 
 ARG JAR_FILE=/build/libs/module1-0.0.1-SNAPSHOT.jar
 
