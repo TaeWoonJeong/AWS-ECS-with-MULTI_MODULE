@@ -6,7 +6,7 @@ plugins {
     kotlin("jvm") version "1.6.21"
     kotlin("plugin.spring") version "1.6.21" apply false
     kotlin("plugin.jpa") version "1.6.21" apply false
-    kotlin("kapt") version "1.7.10" apply false
+    kotlin("kapt") version "1.8.10" apply false
 }
 
 allprojects {
