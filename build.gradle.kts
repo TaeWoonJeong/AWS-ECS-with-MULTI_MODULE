@@ -39,7 +39,7 @@ subprojects {
         // jpa
         implementation("org.springframework.boot:spring-boot-starter-data-jpa")
         // feign
-        implementation("org.springframework.cloud:spring-cloud-starter-openfeign:3.1.3")
+        implementation("org.springframework.cloud:spring-cloud-starter-openfeign:3.1.5")
 
         runtimeOnly("com.h2database:h2")
         runtimeOnly("mysql:mysql-connector-java")
